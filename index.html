@@ -1,0 +1,49 @@
+<!doctype html>
+<html>
+	<head>
+		<title>Calculator</title>
+		<meta charset="UTF-8">
+		<link rel="stylesheet" href="style.css">
+	</head>
+
+	<body>
+		<div class="container">
+			<form name="form">
+				<div class="display">
+					<input type="resultScreen" value="0" name="displayScreen" />
+				</div>
+				<div class="buttons">
+					<div class="column">
+						<input type="buttonColor" name="sum" value="+" onClick="calculate(sum.value)">
+						<input type="button" name="b7" value="7" onClick="calculate(b7.value)">
+						<input type="button" name="b4" value="4" onClick="calculate(b4.value)">
+						<input type="button" name="b1" value="1" onClick="calculate(b1.value)">
+						<input type="button" name="b0" value="0" onClick="calculate(b0.value)">
+					</div>				
+					<div class="column">
+						<input type="buttonColor" name="diff" value="-" onClick="calculate(diff.value)">
+						<input type="button" name="b8" value="8" onClick="calculate(b8.value)">
+						<input type="button" name="b5" value="5" onClick="calculate(b5.value)">
+						<input type="button" name="b2" value="2" onClick="calculate(b2.value)">
+						<input type="button" name="potb" value="." onClick="calculate(potb.value)">
+					</div>
+					<div class="column">
+						<input type="buttonColor" name="mult" value="x" onClick="calculate('*')">
+						<input type="button" name="b9" value="9" onClick="calculate(b9.value)">
+						<input type="button" name="b6" value="6" onClick="calculate(b6.value)">
+						<input type="button" name="b3" value="3" onClick="calculate(b3.value)">
+						<input type="buttonColor" name="clean" value="AC" onClick="javascript:location.reload()">
+					</div>
+					<div class="column">
+						<input type="buttonColor" name="divis" value="÷" onClick="calculate('/')">
+						<input type="total" value="=" onClick="displayScreen.value=eval(displayScreen.value)">
+					</div>
+				</div>
+			</form>
+		</div>
+		<p id="credits">
+			<a href="http://www.ramonpunet.com">© rpunet</a>
+		</p>
+		<script src="calculator.js"></script>
+	</body>
+</html>
